@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>Student Course Registration</h2>
+
+    <form th:action="@{/save}" method="post">
+        <div class="form-group">
+            <label for="studentname">Student Name:</label>
+            <input type="text" class="form-control" id="studentname" name="studentname" required>
+        </div>
+
+        <div class="form-group">
+            <label for="course">Course:</label>
+            <input type="text" class="form-control" id="course" name="course" required>
+        </div>
+
+        <div class="form-group">
+            <label for="fee">Fee:</label>
+            <input type="number" class="form-control" id="fee" name="fee" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <form th:action="@{/logout}" method="get" class="mt-3">
+        <button type="submit" class="btn btn-danger">Logout</button>
+    </form>
+</div>
+
+</body>
+</html>
